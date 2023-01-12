@@ -106,7 +106,7 @@
 .letter {
   position: absolute;
   font-size: 30px;
-  color: white;
+  color: rgb(201, 197, 197);
 }
 
 .btns {
@@ -118,16 +118,32 @@
 
 .btn {
   padding: 0 1rem;
-  height: 100px;
+  height: 50px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
-.btn:hover {
-  cursor: pointer;
-  box-shadow: 0 0 40px 40px grey inset;
-  transition: all 1s;
+.btn::after{
+ content: " ";
+ width: 0;
+ height: 1px;
+ background-image: linear-gradient(to right,black, rgb(255, 58, 94));
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ transition: 0.3s ease-in-out;
 }
+
+
+.btn:hover{
+  transition: 0.3s;
+  color: white;
+}
+.btn:hover::after {
+  width: 100%;
+} 
+
 
 
 /* inicio ------------------------------------------------*/
@@ -195,7 +211,7 @@
   justify-content: center;
   background-color: rgb(255, 58, 94);
   padding: 1vw 3vw;
-  transition: 1s;
+  transition: 0.3s;
 }
 
 .btnSocialMidia:hover {
@@ -209,6 +225,7 @@
 }
 
 .rosto {
+  image-rendering: pixelated;
   animation: move 4s infinite;
 }
 
@@ -230,6 +247,7 @@
   .rosto {
     width: 15vw;
     height: 15vw;
+    image-rendering: pixelated;
   }
 
   .line {}
@@ -365,6 +383,17 @@
   width: 45vw;
 }
 
+.btnLabenu{
+  color: rgb(255, 58, 94);
+border-bottom:1px solid rgb(255, 58, 94);
+}
+.btnLabenu:hover{
+  cursor: pointer;
+  color: grey;
+  border-bottom:1px solid grey ;
+  transition: 0.3s;
+}
+
 
 @media (max-width: 1600px) {
   .foto {
@@ -387,7 +416,7 @@
   flex-direction: column;
   color: white;
   gap: 1.5rem;
-
+  position: relative;
 }
 
 .projectText{
@@ -409,8 +438,67 @@
   justify-content: space-around;
 }
 
+
+
 .projectBtnLeft{
   color: blue;
+}
+
+
+.projectBtnLeft {
+  padding: 0 1rem;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.projectBtnRight{
+  color: red;
+  padding: 0 1rem;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.projectBtnBottom{
+  color: green;
+  padding: 0 1rem;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.projectBtnLeft::after{
+ background-image: linear-gradient(to right,black, blue);  
+}
+
+.projectBtnRight::after{
+  background-image: linear-gradient(to right,black, red);  
+ }
+
+ .projectBtnBottom::after{
+  background-image: linear-gradient(to right,black, green);  
+ }
+
+.projectBtnLeft::after,.projectBtnRight::after, .projectBtnBottom::after{
+ content: " ";
+ width: 0;
+ height: 1px;
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ transition: 0.3s ease-in-out;
+}
+
+
+ .projectBtnLeft:hover::after, .projectBtnRight:hover::after, .projectBtnBottom:hover::after{
+  width: 100%;
+} 
+
+.projectBtnLeft:hover, .projectBtnRight:hover, .projectBtnBottom:hover{
+  cursor: pointer;
 }
 
 .projectBoxRight{
@@ -422,9 +510,7 @@
   flex-direction: column;
   justify-content: space-around;
 }
-.projectBtnRight{
-  color: red;
-}
+
 
 .projectBoxBottom{
   width: 83vw;
@@ -435,9 +521,7 @@
   flex-direction: column;
   justify-content: space-around;
 }
-.projectBtnBottom{
-  color: green;
-}
+
 
 .projectBtnsContainer{
   display: flex;
@@ -452,16 +536,21 @@
 }
 
 .btnMore {
+  font-size: 2.5vw;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: 1s;
+  transition: 0.3s;
 }
 
 .btnMore:hover {
-  background-color: rgb(114, 60, 48, 0.5);
+  background-image: linear-gradient(to bottom, rgb(247, 88, 48), rgb(28, 156, 221), rgb(212, 210, 89));
+  background-clip: text;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  color: black;
 }
 
 

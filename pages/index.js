@@ -91,13 +91,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.btns}>
-          <div className={styles.btn}><a href='#inicio'>Início</a></div>
-          <div className={styles.btn}><a href='#about'>Quem Sou</a></div>
-          <div className={styles.btn}><a href='#projects'>Projetos</a></div>
-          <div className={styles.btn}><a href='#habilities'>Habilidades</a></div>
-          <div className={styles.btn}><a href='#habilities'>Ferramentas</a></div>
-        </div>
+        <nav className={styles.btns}>
+          <a className={styles.btn} href='#inicio'>Início</a>
+          <a className={styles.btn} href='#about'>Quem Sou</a>
+          <a className={styles.btn} href='#projects'>Projetos</a>
+          <a className={styles.btn} href='#habilities'>Habilidades</a>
+          <a className={styles.btn} href='#tools'>Ferramentas</a>
+        </nav>
       </header>
 
       <main id="inicio" className={styles.main}>
@@ -156,8 +156,8 @@ export default function Home() {
             Meu nome é Christopher F. da Silva, sou apaixonado por tecnologia. Meu primeiro contato com programação foi em 2021 quando decidi mudar de carreira e um amigo me apresentou o desenvolvimento web.
           </div>
           <br />
-          <div>
-            Iniciei meus estudos participando do bootcamp da Labenu para desenvolvedor web fullstack, com aulas diárias e projetos semanais, executando mais de 30 projetos durante todo curso.
+          <div className={styles.textLabenu}>
+            Iniciei meus estudos participando do bootcamp da  <a className={styles.btnLabenu} href="https://www.labenu.com.br/" target="_blank" rel="noreferrer">Labenu</a> para desenvolvedor web fullstack, com aulas diárias e projetos semanais, executando mais de 30 projetos durante todo curso.
           </div>
 
           <br />
@@ -255,7 +255,7 @@ export default function Home() {
 
           <div className={styles.footerBox}>
             <Image className={styles.footericon} src='/images/addressicon.png' width="50" height='50' alt='reacticon' />
-            Borges de Medeiros, 2968, Rolante/RS
+            Rolante/RS
           </div>
         </div>
 
