@@ -17,15 +17,14 @@ Portfólio pessoal contendo detalhes sobre meus conhecimentos, projetos e habili
 
 <h2 id=""> Site: </h2>
 
-[https://portfolio-christopher-pi.vercel.app/]
+[https://portfolio-christopher-livid.vercel.app/]
 <br />
 
 
 
 <h2 id="imagens"> Imagens </h2>
 
-![portfólio_img1](https://user-images.githubusercontent.com/87909626/210452187-ab5f019d-9c0f-43d4-805b-be3046db86ac.jpg)
-![portfólio_img2](https://user-images.githubusercontent.com/87909626/210456865-533e86c9-ac76-4a0c-b4f8-1b1015a0c31f.jpg)
+
 
 
 <h2 id="desenvolvedor"> Desenvolvedor 🤖 </h2>
@@ -52,4 +51,4 @@ Teste o código no seu navegador pelo link <a href="#surge">AQUI</a> ou pelo seu
 
 - Clone o código para seu computador.
 - Rode o comando npm instal (para instalar bibliotecas).
-- Rode o comando "npm run dev", abrar pelo localhost:3000 do seu navegador.
+- Rode o comando "npm run dev", abra pelo localhost:3000 do seu navegador.

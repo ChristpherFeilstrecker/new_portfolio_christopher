@@ -11,6 +11,7 @@ export default function Home() {
   }, [])
 
   let [skill, setSkill] = useState("")
+  let [menu, setMenu] = useState(true)
 
   let skills = () => {
     if (skill === "") {
@@ -89,15 +90,25 @@ export default function Home() {
             <div className={styles.logoStyleCenter3}></div>
             <div className={styles.letter}>S</div>
           </div>
+
         </div>
 
-        <nav className={styles.btns}>
-          <a className={styles.btn} href='#inicio'>Início</a>
-          <a className={styles.btn} href='#about'>Quem Sou</a>
-          <a className={styles.btn} href='#projects'>Projetos</a>
-          <a className={styles.btn} href='#habilities'>Habilidades</a>
-          <a className={styles.btn} href='#tools'>Ferramentas</a>
+        <div className={styles.lines} onClick={() => setMenu(!menu)}>
+          <span className={menu ? styles.line1 : styles.line1Active}></span>
+          <span className={menu ? styles.line2 : styles.line2Active}></span>
+          <span className={menu ?  styles.line3: styles.line3Active}></span>
+        </div>
+
+
+
+        <nav className={menu ? styles.hideBtns : styles.btns}>
+          <a onClick={() => setMenu(true)} className={menu ? styles.hideBtn : styles.btn} href='#inicio'>Início</a>
+          <a onClick={() => setMenu(true)} className={menu ? styles.hideBtn : styles.btn} href='#about'>Quem Sou</a>
+          <a onClick={() => setMenu(true)} className={menu ? styles.hideBtn : styles.btn} href='#projects'>Projetos</a>
+          <a onClick={() => setMenu(true)} className={menu ? styles.hideBtn : styles.btn} href='#habilities'>Habilidades</a>
         </nav>
+
+
       </header>
 
       <main id="inicio" className={styles.main}>
@@ -198,27 +209,27 @@ export default function Home() {
         </div>
 
         <div className={styles.projectBoxBottom}>
-        <h2>Aggostini</h2>
+          <h2>Aggostini</h2>
 
-<div className={styles.projectText}>Site para empresa de produtos e serviços hidráulicos, feito com React, Node e Javascript</div>
+          <div className={styles.projectText}>Site para empresa de produtos e serviços hidráulicos, feito com React, Node e Javascript</div>
 
-<div className={styles.projectBtnsContainer}>
-  <h3 className={styles.projectBtnBottom}>Documentação</h3>
-  <h3 className={styles.projectBtnBottom}>Visualizar projeto</h3>
-</div>
+          <div className={styles.projectBtnsContainer}>
+            <h3 className={styles.projectBtnBottom}>Documentação</h3>
+            <h3 className={styles.projectBtnBottom}>Visualizar projeto</h3>
+          </div>
         </div>
 
         <div></div>
 
         <div className={styles.boxbtnMore}>
-          <div className={styles.btnMore}>Repositórios Github</div>
+          <a href="https://github.com/ChristpherFeilstrecker?tab=repositories" target="_blank" rel="noreferrer"><div className={styles.btnMore}>RepositóriosGithub</div></a>
 
         </div>
       </projetcts >
 
       <habilities id="habilities" className={styles.habilitiesContainer}>
 
-      <div className={styles.title}><h1> Habilidades </h1><h1 className={styles.red}> .</h1></div>
+        <div className={styles.title}><h1> Habilidades </h1><h1 className={styles.red}> .</h1></div>
 
         <div className={styles.habBoxContainer}>
           <div data-aos="fade-right" className={styles.habLeftBox}>
@@ -259,7 +270,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.footerCollumn}>
+        <div className={styles.footerCollumnIcons}>
           <a href="https://github.com/ChristpherFeilstrecker" target="_blank" rel="noreferrer">
             <Image className={styles.footericon} src='/images/githubicon.png' width="50" height='50' alt='reacticon' />
           </a>
