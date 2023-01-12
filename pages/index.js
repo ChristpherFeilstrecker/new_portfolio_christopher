@@ -180,7 +180,7 @@ export default function Home() {
       </about>
 
       <projetcts id="projects" className={styles.projectsContainer}>
-        <div className={styles.title}><h1> Projetos </h1><h1 className={styles.red}> .</h1></div>
+      <div className={styles.title}><h1> Projetos </h1><h1 className={styles.red}> .</h1></div>
 
         <div className={styles.projectContainerTop}>
 

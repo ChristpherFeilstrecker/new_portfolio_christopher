@@ -6,6 +6,7 @@
   line-height: 1.5;
 }
 
+
 .red {
   color: rgb(254, 62, 99);
   padding: 0 1vw;
@@ -17,7 +18,7 @@
   padding-bottom: 1rem;
 }
 
-/* Inicio */
+/* navBar */
 
 .main {
   font-family: 'Fira Sans', sans-serif;
@@ -103,8 +104,6 @@
   clip-path: polygon(0 0, 56% 0, 58% 100%, 0% 100%);
 }
 
-
-
 .letter {
   position: absolute;
   font-size: 30px;
@@ -112,6 +111,13 @@
 }
 
 .btns {
+  display: flex;
+  font-size: 1.2rem;
+  color: rgb(219, 216, 216);
+  gap: 2vw;
+}
+
+.hideBtns {
   display: flex;
   font-size: 1.2rem;
   color: rgb(219, 216, 216);
@@ -126,7 +132,15 @@
   position: relative;
 }
 
-.btn::after {
+.hideBtn {
+  padding: 0 1rem;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.btn::after,.hideBtn::after {
   content: " ";
   width: 0;
   height: 1px;
@@ -138,15 +152,14 @@
 }
 
 
-.btn:hover {
+.btn:hover, .hideBtn:hover {
   transition: 0.3s;
   color: white;
 }
 
-.btn:hover::after {
+.btn:hover::after, .hideBtn:hover::after {
   width: 100%;
 }
-
 
 
 @media (max-width: 720px) {
@@ -543,6 +556,10 @@
   text-align: left;
   color: white;
   width: 45vw;
+}
+
+.aboutTitle{
+  font-size: 1em;
 }
 
 .btnLabenu {
@@ -1105,6 +1122,12 @@
   gap: 1em;
 }
 
+.footerCollumnIcons {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
 @media (max-width: 1000px) {
  
   .footerContainer {
@@ -1125,7 +1148,7 @@
   .footerCollumnIcons {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 2em;
   }
   
   .footerBox {
