@@ -76,20 +76,7 @@ export default function Home() {
       </Head>
       <header className={styles.navBar}>
         <div className={styles.logo}>
-          <div className={styles.logoStyle1}>
-            <div className={styles.logoStyleCenter1}></div>
-            <div className={styles.letter}>C</div>
-          </div>
-
-          <div className={styles.logoStyle2}>
-            <div className={styles.logoStyleCenter2}></div>
-            <div className={styles.letter}>F</div>
-          </div>
-
-          <div className={styles.logoStyle3}>
-            <div className={styles.logoStyleCenter3}></div>
-            <div className={styles.letter}>S</div>
-          </div>
+          <div>Christopher FS</div>
 
         </div>
 
@@ -113,7 +100,7 @@ export default function Home() {
 
       <main id="inicio" className={styles.main}>
         <div className={styles.boxLeft}>
-          <div>Oi, eu sou</div>
+          <div className={styles.name}>Oi, eu sou</div>
           <div className={styles.name}>
             Christopher <div className={styles.red}>Feilstrecker</div> da Silva.
             <div className={styles.line}></div>
@@ -143,18 +130,16 @@ export default function Home() {
           <div className={styles.logo_2}>
 
             <div className={styles.logoStyle2_2}>
-              <div className={styles.logoStyleCenter2_2}></div>
-              <div className={styles.letter}>JS</div>
+              <Image className={styles.icon} src='/images/javascripticon.png' width="50" height='50' alt='rosto' />
             </div>
 
             <div className={styles.logoStyle1_2}>
-              <div className={styles.logoStyleCenter1_2}></div>
-              <div className={styles.letter}>5</div>
+            <Image className={styles.icon} src='/images/htmlicon.png' width="50" height='50' alt='rosto' />
             </div>
 
             <div className={styles.logoStyle3_2}>
-              <div className={styles.logoStyleCenter3_2}></div>
-              <div className={styles.letter}>3</div>
+            <Image className={styles.icon} src='/images/cssicon.png' width="50" height='50' alt='rosto' />
+
             </div>
           </div>
         </div>

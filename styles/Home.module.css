@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Explora&display=swap');
 
 .portfolio {
   background-color: black;
@@ -47,6 +48,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+  font-family: 'Explora', cursive;
+  font-size: 3rem;
 }
 
 .logoStyle1 {
@@ -415,7 +419,7 @@
 
   .boxLeft {
     color: white;
-    width: 100vw;
+    width:80vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -469,7 +473,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(249, 134, 107);
   height: 55px;
   width: 55px;
   border-radius: 100%;
@@ -490,39 +493,24 @@
   }
 }
 
-.logoStyleCenter1_2 {
-  background-color: rgb(247, 88, 48);
-  height: 50px;
-  width: 50px;
-  border-radius: 100%;
-  clip-path: polygon(0 0, 56% 0, 58% 100%, 0% 100%);
-}
+
 
 .logoStyle2_2 {
   z-index: 101;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(28, 156, 221);
   height: 55px;
   width: 55px;
   border-radius: 100%;
 }
 
-.logoStyleCenter2_2 {
-  background-color: rgb(15, 128, 189);
-  height: 50px;
-  width: 50px;
-  border-radius: 100%;
-  clip-path: polygon(0 0, 56% 0, 58% 100%, 0% 100%);
-}
 
 .logoStyle3_2 {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(212, 210, 89);
   height: 55px;
   width: 55px;
   border-radius: 100%;
@@ -543,19 +531,12 @@
   }
 }
 
-.logoStyleCenter3_2 {
-  background-color: rgb(235, 176, 99);
-  height: 50px;
-  width: 50px;
-  border-radius: 100%;
-  clip-path: polygon(0 0, 56% 0, 58% 100%, 0% 100%);
-}
 
 .aboutboxRigth {
   font-size: 1.5vw;
   text-align: left;
   color: white;
-  width: 45vw;
+  width: 40vw;
 }
 
 .aboutTitle{
@@ -609,6 +590,7 @@
 /* Projetos ---------------------------------------*/
 
 .projectsContainer {
+  
   scroll-behavior: smooth;
   scroll-padding-top: 14rem;
   padding: 1rem 0;
@@ -627,14 +609,15 @@
 }
 
 .projectContainerTop {
+  width: 80vw;
   display: flex;
-  gap: 2rem;
+  justify-content: space-between;
 }
 
 .projectBoxLeft {
-  width: 40vw;
+  width: 39vw;
   height: 20vw;
-  border: 2px solid blue;
+  border: 2px solid rgb(216, 157, 201);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -644,7 +627,7 @@
 
 
 .projectBtnLeft {
-  color: blue;
+  color: rgb(216, 157, 201);
 }
 
 
@@ -657,7 +640,7 @@
 }
 
 .projectBtnRight {
-  color: red;
+  color: rgb(144, 185, 84);
   padding: 0 1rem;
   height: 50px;
   display: flex;
@@ -665,8 +648,18 @@
   position: relative;
 }
 
+.projectBoxRight {
+  width: 39vw;
+  height: 20vw;
+  border: 2px solid rgb(144, 185, 84);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .projectBtnBottom {
-  color: green;
+  color: rgb(240, 209, 67);
   padding: 0 1rem;
   height: 50px;
   display: flex;
@@ -675,15 +668,15 @@
 }
 
 .projectBtnLeft::after {
-  background-image: linear-gradient(to right, black, blue);
+  background-image: linear-gradient(to right, black, rgb(216, 157, 201));
 }
 
 .projectBtnRight::after {
-  background-image: linear-gradient(to right, black, red);
+  background-image: linear-gradient(to right, black, rgb(144, 185, 84));
 }
 
 .projectBtnBottom::after {
-  background-image: linear-gradient(to right, black, green);
+  background-image: linear-gradient(to right, black, rgb(240, 209, 67));
 }
 
 .projectBtnLeft::after,
@@ -711,21 +704,12 @@
   cursor: pointer;
 }
 
-.projectBoxRight {
-  width: 40vw;
-  height: 20vw;
-  border: 2px solid red;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
 
 
 .projectBoxBottom {
-  width: 83vw;
+  width: 80vw;
   height: 20vw;
-  border: 2px solid green;
+  border: 2px solid rgb(240, 209, 67);
   padding: 2rem;
   display: flex;
   flex-direction: column;
