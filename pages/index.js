@@ -13,56 +13,93 @@ export default function Home() {
   let [skill, setSkill] = useState("")
   let [menu, setMenu] = useState(true)
 
-  let skills = () => {
-    if (skill === "") {
-      return <>/* clique sobre o ícone para ler as informações.*/</>
-    } else if (skill === "css") {
-      return <div className={styles.boxSkill1}>
-        <h4>CSS</h4>
-        <p className={styles.textSkill}>Cascading Style Sheets é um mecanismo para adicionar estilos a uma página web, aplicado diretamente nas tags HTML ou ficar contido dentro das tags.</p>
-        <p className={styles.textSkill}>Tenho mais de 1 ano e meio de experiência com esta tecnologia.</p>
-
-      </div>
-
-    } else if (skill === "html") {
-      return <div className={styles.boxSkill2}>
-        <h4>HTML</h4>
-        <p className={styles.textSkill}>HTML é uma linguagem de marcação utilizada na construção de páginas na Web.</p>
-        <p className={styles.textSkill}>Tenho mais de 1 ano e meio de experiência com esta tecnologia.</p>
-
-      </div>
-
-    } else if (skill === "js") {
-      return <div className={styles.boxSkill3}>
-        <h4>Javascript</h4>
-        <p className={styles.textSkill}>JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web</p>
-        <p className={styles.textSkill}>Tenho mais de 1 ano e meio de experiência com esta tecnologia.</p>
-
-      </div>
-    } else if (skill === "node") {
-      return <div className={styles.boxSkill4}>
-        <h4>Node</h4>
-        <p className={styles.textSkill}>Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web.</p>
-        <p className={styles.textSkill}>Tenho mais de 1 ano de experiência com esta tecnologia.</p>
-
-      </div>
-    } else if (skill === "next") {
-      return <div className={styles.boxSkill5}>
-        <h4>Next.js</h4>
-        <p className={styles.textSkill}>Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.</p>
-        <p className={styles.textSkill}>Tenho mais de 6 meses de experiência com esta tecnologia.</p>
-
-      </div>
-    } else if (skill === "react") {
-      return <div className={styles.boxSkill6}>
-        <h4>React</h4>
-        <p className={styles.textSkill}>O React é uma biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.</p>
-        <p className={styles.textSkill}>Tenho mais de 1 ano e meio de experiência com esta tecnologia.</p>
-
-      </div>
+  const skills = [
+    {
+      id: "js",
+      titulo: "Javascript",
+      descricao: "1 ano e meio",
+      icone: "/images/javascripticon.png"
+    },
+    {
+      id: "html",
+      titulo: "HTML",
+      descricao: "1 ano e meio",
+      icone: "/images/htmlicon.png"
+    },
+    {
+      id: "css",
+      titulo: "CSS",
+      descricao: "1 ano e meio",
+      icone: "/images/cssicon.png"
+    },
+    {
+      id: "node",
+      titulo: "Node",
+      descricao: "1 ano",
+      icone: "/images/nodeicon.png"
+    },
+    {
+      id: "next",
+      titulo: "Next.js",
+      descricao: "5 meses",
+      icone: "/images/javascripticon.png"
+    },
+    {
+      id: "react",
+      titulo: "React",
+      descricao: "1 ano e meio",
+      icone: "/images/reacticon.png"
+    },
+    {
+      id: "express.js", 
+      titulo: "Express.js",
+      descricao: "1 ano e meio",
+      icone: "/images/expressicon.png"
+    },
+    {
+      id: "typescript", 
+      titulo: "Typescript",
+      descricao: "1 ano",
+      icone: "/images/typescripticon.png"
+    },
+    {
+      id: "axios", 
+      titulo: "Axios",
+      descricao: "1 ano",
+      icone: "/images/axiosicon.png"
+    },
+    {
+      id: "sql", 
+      titulo: "SQL",
+      descricao: "1 ano",
+      icone: "/images/sqlicon.png"
+    },
+    {
+      id: "figma", 
+      titulo: "Figma",
+      descricao: "6 meses",
+      icone: "/images/figmaicon.png"
+    },
+    {
+      id: "git", 
+      titulo: "Git/Github",
+      descricao: "1 ano e meio",
+      icone: "/images/githubicon.png"
     }
+  ]
 
-  }
+  const skillDetail = skills.map((skill) => {
+                return <div  data-aos="fade-right" className={styles.skillContainer}>
+        <div key={skill.id}  className={styles.skillIcon}>
+          <Image className={styles.fotohabilities} src={skill.icone} width="150" height='180' alt={skill.id} />
+        </div>
+        <div>
+          <strong>{skill.titulo}</strong>
+          <div>{skill.descricao}</div>
+        </div>
+      </div>
+            })
+
 
   return (
     <div className={styles.portfolio}>
@@ -83,7 +120,7 @@ export default function Home() {
         <div className={styles.lines} onClick={() => setMenu(!menu)}>
           <span className={menu ? styles.line1 : styles.line1Active}></span>
           <span className={menu ? styles.line2 : styles.line2Active}></span>
-          <span className={menu ?  styles.line3: styles.line3Active}></span>
+          <span className={menu ? styles.line3 : styles.line3Active}></span>
         </div>
 
 
@@ -134,11 +171,11 @@ export default function Home() {
             </div>
 
             <div className={styles.logoStyle1_2}>
-            <Image className={styles.icon} src='/images/htmlicon.png' width="50" height='50' alt='rosto' />
+              <Image className={styles.icon} src='/images/htmlicon.png' width="50" height='50' alt='rosto' />
             </div>
 
             <div className={styles.logoStyle3_2}>
-            <Image className={styles.icon} src='/images/cssicon.png' width="50" height='50' alt='rosto' />
+              <Image className={styles.icon} src='/images/cssicon.png' width="50" height='50' alt='rosto' />
 
             </div>
           </div>
@@ -165,7 +202,7 @@ export default function Home() {
       </about>
 
       <projetcts id="projects" className={styles.projectsContainer}>
-      <div className={styles.title}><h1> Projetos </h1><h1 className={styles.red}> .</h1></div>
+        <div className={styles.title}><h1> Projetos </h1><h1 className={styles.red}> .</h1></div>
 
         <div className={styles.projectContainerTop}>
 
@@ -214,22 +251,20 @@ export default function Home() {
 
       <habilities id="habilities" className={styles.habilitiesContainer}>
 
+
+
         <div className={styles.title}><h1> Habilidades </h1><h1 className={styles.red}> .</h1></div>
 
+
+
         <div className={styles.habBoxContainer}>
-          <div data-aos="fade-right" className={styles.habLeftBox}>
+          <div className={styles.habLeftBox}>
 
-            <Image onClick={() => setSkill("js")} className={styles.fotohabilities} src='/images/javascripticon.png' width="150" height='180' alt='javascripticon' />
-            <Image onClick={() => setSkill("html")} className={styles.fotohabilities} src='/images/htmlicon.png' width="150" height='180' alt='htmlicon' />
-            <Image onClick={() => setSkill("css")} className={styles.fotohabilities} src='/images/cssicon.png' width="150" height='180' alt='cssicon' />
-            <Image onClick={() => setSkill("node")} className={styles.fotohabilities} src='/images/nodeicon.png' width="150" height='150' alt='nodeicon' />
-            <Image onClick={() => setSkill("next")} className={styles.fotohabilities} src='/images/nexticon.png' width="150" height='150' alt='nexticon' />
-            <Image onClick={() => setSkill("react")} className={styles.fotohabilities} src='/images/reacticon.png' width="150" height='150' alt='reacticon' />
+            {skillDetail}
 
-          </div>
+          </div >
 
           <div data-aos="fade-left" className={styles.habRigthBox}>
-            {skills()}
           </div>
 
         </div>
