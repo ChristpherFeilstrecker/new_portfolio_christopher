@@ -65,7 +65,7 @@ export default function Home() {
     {
       id: "axios", 
       titulo: "Axios",
-      descricao: "1 ano",
+      descricao: "1 ano e meio",
       icone: "/images/axiosicon.png"
     },
     {
@@ -85,6 +85,18 @@ export default function Home() {
       titulo: "Git/Github",
       descricao: "1 ano e meio",
       icone: "/images/githubicon.png"
+    },
+    {
+      id: "styledComponents", 
+      titulo: "Styled-components",
+      descricao: "1 ano e meio",
+      icone: "/images/styledicon.png"
+    },
+    {
+      id: "ssss", 
+      titulo: "Sass",
+      descricao: "6 meses",
+      icone: "/images/scssicon.png"
     }
   ]
 

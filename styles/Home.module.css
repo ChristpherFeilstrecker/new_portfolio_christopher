@@ -45,6 +45,7 @@
 }
 
 .logo {
+  
   gap: 0.3rem;
   width: 30%;
   display: flex;
@@ -52,7 +53,7 @@
   justify-content: center;
   color: white;
   font-family: 'Explora', cursive;
-  font-size: 3rem;
+  font-size: 4vw;
 }
 
 .logoStyle1 {
@@ -173,11 +174,10 @@
 
 @media (max-width: 720px) {
   .logo {
+    position: absolute;
     gap: 0.3rem;
-    width: 50%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+
   }
 
   .hideBtn {
@@ -783,7 +783,7 @@
   .projectBoxBottom {
     width: 85vw;
     height: 20vw;
-    border: 2px solid green;
+    border: 2px solid rgb(240, 209, 67);
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -793,7 +793,7 @@
   .projectBoxLeft {
     width: 85vw;
     height: 20vw;
-    border: 2px solid blue;
+    border: 2px solid rgb(216, 157, 201);
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -803,7 +803,7 @@
   .projectBoxRight {
     width: 85vw;
     height: 20vw;
-    border: 2px solid red;
+    border: 2px solid rgb(144, 185, 84);
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -900,7 +900,12 @@ padding: 0.5em;
   }
 
 
-@media (max-width: 1700px) {
+@media (max-width: 720px) {
+  .fotohabilities {
+    width: 2em;
+    height:2em;
+  margin-right: 1rem;
+  }
 }
 
 
