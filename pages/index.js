@@ -224,8 +224,8 @@ export default function Home() {
             <div className={styles.projectText}>Site de lista de pokemons, feito em Next.js, Javascript e styled-components.</div>
 
             <div className={styles.projectBtnsContainer}>
-              <h3 className={styles.projectBtnLeft}>Documentação</h3>
-              <h3 className={styles.projectBtnLeft}>Visualizar projeto</h3>
+              <h3 className={styles.projectBtnLeft}> <a href="https://github.com/ChristpherFeilstrecker/PokeNext" target="_blank" rel="noreferrer">Documentação</a></h3>
+              <h3 className={styles.projectBtnLeft}> <a href="https://pokenext-7hlp.vercel.app/" target="_blank" rel="noreferrer">Visualizar projeto</a></h3>
             </div>
 
           </div>
@@ -236,8 +236,8 @@ export default function Home() {
             <div className={styles.projectText}>Projeto final do bootcamp da labenu, feito em React, Javascript e CSS.</div>
 
             <div className={styles.projectBtnsContainer}>
-              <h3 className={styles.projectBtnRight}>Documentação</h3>
-              <h3 className={styles.projectBtnRight}>Visualizar projeto</h3>
+              <h3 className={styles.projectBtnRight}><a href="https://github.com/ChristpherFeilstrecker/Labe-food" target="_blank" rel="noreferrer">Documentação</a></h3>
+              <h3 className={styles.projectBtnRight}> <a href="https://labe-food7.surge.sh/" target="_blank" rel="noreferrer">Visualizar projeto</a></h3>
             </div>
           </div>
         </div>
@@ -248,8 +248,8 @@ export default function Home() {
           <div className={styles.projectText}>Site para empresa de produtos e serviços hidráulicos, feito com React, Node e Javascript</div>
 
           <div className={styles.projectBtnsContainer}>
-            <h3 className={styles.projectBtnBottom}>Documentação</h3>
-            <h3 className={styles.projectBtnBottom}>Visualizar projeto</h3>
+            <h3 className={styles.projectBtnBottom}><a href="https://github.com/ChristpherFeilstrecker/Aggostini" target="_blank" rel="noreferrer">Documentação</a></h3>
+            <h3 className={styles.projectBtnBottom}> <a href="https://aggostini.com.br/" target="_blank" rel="noreferrer">Visualizar projeto</a></h3>
           </div>
         </div>
 
