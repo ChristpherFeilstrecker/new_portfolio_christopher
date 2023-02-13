@@ -10,7 +10,6 @@ export default function Home() {
     Aos.init({ duration: 1500 });
   }, [])
 
-  let [skill, setSkill] = useState("")
   let [menu, setMenu] = useState(true)
 
   const skills = [
@@ -111,7 +110,6 @@ export default function Home() {
         </div>
       </div>
             })
-
 
   return (
     <div className={styles.portfolio}>
@@ -234,7 +232,6 @@ export default function Home() {
             <h2>Labefood</h2>
 
             <div className={styles.projectText}>Projeto final do bootcamp da labenu, feito em React, Javascript e CSS.</div>
-
             <div className={styles.projectBtnsContainer}>
               <h3 className={styles.projectBtnRight}><a href="https://github.com/ChristpherFeilstrecker/Labe-food" target="_blank" rel="noreferrer">Documentação</a></h3>
               <h3 className={styles.projectBtnRight}> <a href="https://labe-food7.surge.sh/" target="_blank" rel="noreferrer">Visualizar projeto</a></h3>
@@ -242,11 +239,10 @@ export default function Home() {
           </div>
         </div>
 
+
         <div className={styles.projectBoxBottom}>
           <h2>Aggostini</h2>
-
           <div className={styles.projectText}>Site para empresa de produtos e serviços hidráulicos, feito com React, Node e Javascript</div>
-
           <div className={styles.projectBtnsContainer}>
             <h3 className={styles.projectBtnBottom}><a href="https://github.com/ChristpherFeilstrecker/Aggostini" target="_blank" rel="noreferrer">Documentação</a></h3>
             <h3 className={styles.projectBtnBottom}> <a href="https://aggostini.com.br/" target="_blank" rel="noreferrer">Visualizar projeto</a></h3>
@@ -254,10 +250,8 @@ export default function Home() {
         </div>
 
         <div></div>
-
         <div className={styles.boxbtnMore}>
           <a href="https://github.com/ChristpherFeilstrecker?tab=repositories" target="_blank" rel="noreferrer"><div className={styles.btnMore}>RepositóriosGithub</div></a>
-
         </div>
       </projetcts >
 
